@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   def top
-    @restaurants = Restaurant.where(stars: 5)
+    @restaurants = Restaurant.where(rating: 5)
     render :index
   end
 
